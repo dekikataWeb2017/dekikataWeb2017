@@ -1,7 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  <!-- Behavioral Meta Data -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="できごとのかたち2017">
+<meta name="keywords" content="できごとのかたち2017, 多摩美術大学, 多摩美, 情報デザイン, 情デ, できごとのかたち, できかた, 2017">
+
 
 <link rel="stylesheet" href="css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
@@ -36,15 +42,25 @@
 
 
 <div id="top">
-    <p class="text_top"><img src="img/text.svg"></p>
-    <a href="#open"<div class="btn">できかた展とは？</div></a>
+    <div class="text_top"><img src="img/text.svg"></div>
+    <a href="#open"><div class="btn">できかた展とは？</div></a>
 
     <div id="modal">
+      <script>
+        function hyoji1(num){
+          if (num == 0){
+            document.getElementById("open").style.display="none";
+          }
+          else{
+            document.getElementById("open").style.display="block";
+          }
+        }
+      </script>
       <div id="open">
-        <a href="#" class="close_overlay">×</a>
+        <a href="#" class="close_overlay"></a>
         <div class="modal_window">
           <h2>できかた展とは？</h2>
-          <p>できごとのかたち展を略して通称”できかた展”。学生の課題作品を発表し、多摩美術大学情報デザイン学科情報デザインコースを広く知ってもらうことを目的としたプロジェクトです。</p>
+          <p>できごとのかたちを略して通称”できかた展”。学生の課題作品を発表し、多摩美術大学情報デザイン学科情報デザインコースを広く知ってもらうことを目的としたプロジェクトです。</p>
           <a href="#">× 閉じる</a>
         </div>
       </div>
