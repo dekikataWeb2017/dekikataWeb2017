@@ -1,0 +1,70 @@
+@media screen and (max-width:430px){
+	#wrapper{
+		position: fixed;
+		text-align: center;
+	}
+	header{
+		position: fixed;top:0;
+	}
+	.menu{
+		/*display: none;*/
+	}
+	body{
+		background-size:150%;
+		text-align: center;
+	}
+	.logo{
+		font-size: 1.6em;
+	}
+	#navmenu{
+        position: absolute;
+        /* 開いてないときは画面外に配置 */
+        top: -500px;
+        background: #333;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+	}
+	ul.menu{
+		/*display: none;*/
+	}
+	#main{
+		padding: 5%;
+	}
+	.contents{
+		width: 100%;
+	}
+	footer{
+		position: fixed;
+		width:100%;
+		bottom: 10px;
+		text-align: center;
+	}
+	.sns{
+		margin: 0 auto;
+	}
+	
+    #nav-toggle {
+        display: block;
+    }
+    /* #nav-toggle 切り替えアニメーション */
+    .open #nav-toggle span:nth-child(1) {
+        top: 11px;
+        -webkit-transform: rotate(315deg);
+        -moz-transform: rotate(315deg);
+        transform: rotate(315deg);
+    }
+    .open #nav-toggle span:nth-child(2) {
+        width: 0;
+        left: 50%;
+    }
+    .open #nav-toggle span:nth-child(3) {
+        top: 11px;
+        -webkit-transform: rotate(-315deg);
+        -moz-transform: rotate(-315deg);
+        transform: rotate(-315deg);
+    }
+}

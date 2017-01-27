@@ -2,146 +2,175 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <!-- Behavioral Meta Data -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="できごとのかたち2017">
-<meta name="keywords" content="できごとのかたち2017, 多摩美術大学, 多摩美, 情報デザイン, 情デ, できごとのかたち, できかた, 2017">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="できごとのかたち2017">
+  <meta name="keywords" content="できごとのかたち2017, 多摩美術大学, 多摩美, 情報デザイン, 情デ, できごとのかたち, できかた, 2017">
+
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style_sp.css" type="text/css" media="only screen and (max-device-width:640px)">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen and (min-device-width:641px)">
+
+  <script src="http://maps.google.com/maps/api/js?sensor=true">
+  </script>
+
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="UTF-8"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+    $('.contents').hide();
+    $('.contents:first').show();
+    $('.menu li:first').addClass('active');
+
+    $('.menu li').click(function() {
+
+      $('.menu li').removeClass('active');
+      $(this).addClass('active');
+      $('.contents').hide();
 
 
-<link rel="stylesheet" href="css/normalize.css" type="text/css" media="all">
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+      $($(this).find('a').attr('href')).fadeIn();
+      return false;
+    });
+  });
 
-<title>できごとのかたち2017</title>
+  </script>
+
+
+  <title>できごとのかたち2017</title>
 
 </head>
 
 <body>
 
-<div id="wrapper">
-  <div class="sns">
-    <a href="https://twitter.com/dekikata2017" target="_blank"><img src="img/sns_twitter.svg" width="32px" height="32px"></a>
-      <a href="http://www.facebook.com/idd.dekikata" target="_blank"><img src="img/sns_facebook.svg" width="32px" height="32px"></a>
-      <a href="https://www.instagram.com/dekikata2017/?hl=ja" target="_blank"><img src="img/sns_instagram.svg" width="32px" height="32px"></a>
-    </div>
+  <div id="wrapper">
 
-<div id="header">
-	<div id="menu">
-		<ul>
-        	<li><a href="index.html#about">展覧会概要</a></li>
-            <li><a href="index.html#event">イベント</a></li>
-            <li><a href="index.html#works">出展作品</a></li>
-            <li><a href="index.html#access">会場</a></li>
-            <li><a href="index.html#link">リンク</a></li>
-        </ul>
-	</div>
-</div>
+    <header>
+      <h1 class="logo"><a href="index.html"><img src="img/logo.svg"></a></h1>
 
+      <!-- メニュー -->
+      <ul class="menu">
+        <!-- <li><a href="#page1">トップ</a></li> -->
+        <li><a href="#page2">概要</a></li>
+        <li><a href="#page3">イベント</a></li>
+        <li><a href="#page4">出展作品</a></li>
+        <li><a href="#page5">会場</a></li>
+        <li><a href="#page6">リンク</a></li>
+      </ul>
+    </header>
 
-<div id="main">
+    <!-- コンテンツ -->
+    <div id="main">
 
-
-<div id="top">
-    <div class="text_top"><img src="img/text.svg"></div>
-    <a href="#open"><div class="btn">できかた展とは？</div></a>
-
-    <div id="modal">
-      <script>
-        function hyoji1(num){
-          if (num == 0){
-            document.getElementById("open").style.display="none";
-          }
-          else{
-            document.getElementById("open").style.display="block";
-          }
-        }
-      </script>
-      <div id="open">
-        <a href="#" class="close_overlay"></a>
-        <div class="modal_window">
-          <h2>できかた展とは？</h2>
-          <p>できごとのかたちを略して通称”できかた展”。学生の課題作品を発表し、多摩美術大学情報デザイン学科情報デザインコースを広く知ってもらうことを目的としたプロジェクトです。</p>
-          <a href="#">× 閉じる</a>
-        </div>
+      <!-- トップ -->
+      <div id="page1" class="contents">
+        <img src="img/text_top.svg" width="100%">
       </div>
-    </div>
 
-</div>
+      <!-- 展覧会概要 -->
+      <div id="page2" class="contents">
+        <h2 class="title">展覧会概要</h2>
+        <h3 class="title_sub">できごとのかたち展とは？</h3>
+        <p>
+          通称”できかた展”。学生の課題作品を発表し、多摩美術大学情報デザイン学科情報デザインコースを
+          広く知ってもらうことを目的としたプロジェクトです。
+        </p>
+      </div>
 
+      <!-- イベント -->
+      <div id="page3" class="contents">
+        <h2 class="title">イベント</h2>
+        <h3 class="title_sub">ワークショップ</h3>
+        <p>
+          Coming Soon…
+        </p>
 
+        <h3 class="title_sub">トークイベント</h3>
+        <p>
+          Coming Soon…
+        </p>
+      </div>
 
-<div id="about">
-	<h2 class="title">展覧会概要</h2>
-	<h3 class="title_sub">できごとのかたち展とは？</h3>
-<p>
-通称”できかた展”。学生の課題作品を発表し、多摩美術大学情報デザイン学科情報デザインコースを
-広く知ってもらうことを目的としたプロジェクトです。
-</p>
+      <!-- 作品集 -->
+      <div id="page4" class="contents">
+        <h2 class="title">出展作品</h2>
+        <h3 class="title_sub">作品集</h3>
+        <p>
+          Coming Soon…
+        </p>
+      </div>
 
-<h3>今年度のテーマ</h3>
-<p>
-今年度の「できごとのかたち展」は、情デ生の日常を「できごと」、
-その積み重ねによってできた作品や展覧会を「かたち」と考え、
-「できごと」と「かたち」の相互関係を伝える試みです。
-情デについて、これまで以上に知ってもらえる展覧会をめざしています。
-</p>
-</div>
+      <!-- アクセス -->
+      <div id="page5" class="contents">
+        <h2 class="title">会場</h2>
+        <h3 class="title_sub">AXISギャラリーへの道のり</h3>
+        <img src="img/accessmap.svg" width="570px">
+        <p>
+          AXISギャラリー<br />
+          〒106-003 東京都港区六本木5-17-1 AXISビル4F
+        </p>
+        <a href="https://goo.gl/maps/frezbgKL7cE2" target="_blank"><div class="btn">Googleマップで表示</div></a>
 
-<div id="event">
-	<h2>イベント</h2>
-	<h3>ワークショップ</h3>
-<p>
-通称”できかた展”。学生の課題作品を発表し、多摩美術大学情報デザイン学科情報デザインコースを
-広く知ってもらうことを目的としたプロジェクトです。
-</p>
+        <h3 class="title_sub">会場へのアクセス</h3>
 
-<h3>トークイベント</h3>
-<p>
-今年度の「できごとのかたち展」は、情デ生の日常を「できごと」、
-その積み重ねによってできた作品や展覧会を「かたち」と考え、
-「できごと」と「かたち」の相互関係を伝える試みです。
-情デについて、これまで以上に知ってもらえる展覧会をめざしています。
-</p>
-</div>
+        <h4>電車でお越しの場合</h4>
+        <p>
+          都営地下鉄大江戸線　六本木駅③、⑤番出口<br />
+          東京メトロ日比谷線　六本木駅③番出口
+        </p>
 
-<div id="access">
-	<h2>会場</h2>
-	<h3>会場アクセス</h3>
-<p>
-通称”できかた展”。学生の課題作品を発表し、多摩美術大学情報デザイン学科情報デザインコースを
-広く知ってもらうことを目的としたプロジェクトです。
-</p>
+          <h4>バスでお越しの場合</h4>
+          <p>
+          渋谷駅前（東口バスターミナルより）<br />
+          都01　51番乗り場　新橋駅前行きまたは赤坂アークヒルズ行き：六本木駅前下車<br />
+          渋88　59番乗り場　新橋駅前行き：六本木五丁目下車
+        </p>
+      </div>
 
-<h3>AXISギャラリーへの道のり</h3>
-<p>
-今年度の「できごとのかたち展」は、情デ生の日常を「できごと」、
-その積み重ねによってできた作品や展覧会を「かたち」と考え、
-「できごと」と「かたち」の相互関係を伝える試みです。
-情デについて、これまで以上に知ってもらえる展覧会をめざしています。
-</p>
-</div>
+      <!-- リンク -->
+      <div id="page6" class="contents">
+        <h2 class="title">リンク</h2>
+        <div class="link">
+          <a href="http://www.idd.tamabi.ac.jp/design/exhibit/dekikata/" target="_blank">
+            <img src="img/dekikata.svg" height="110px">
+            <p>
+              できごとのかたち<br />
+              総合サイト</p>
+            </a>
+          </div>
+          <div class="link">
+            <a href="http://www.idd.tamabi.ac.jp/design/exhibit/gw16/" target="_blank">
+              <img src="img/sotsuten.svg" height="120px">
+              <p>
+                情デ卒展<br />
+                こ−個性のつながり</p>
+              </a>
+            </div>
+            <div class="link">
+              <a href="http://www.idd.tamabi.ac.jp/design/" target="_blank">
+                <img src="img/idd_design.svg" height="120px">
+                <p>
+                  情報デザインコース<br />
+                  Webサイト</p>
+                </a>
+              </div>
 
-<div id="link">
-	<h2>リンク</h2>
-<p>
-できごとのかたち総合サイト<br />
-卒制<br />
-情報デザインコースWebサイト<br />
-</p>
+            </div>
 
-</div>
+          </div>
 
-</div>
+          <footer>
+            <!-- snsへのリンク -->
+            <div class="sns">
+              <a href="https://twitter.com/dekikata2017" target="_blank"><img src="img/sns_twitter.svg" width="32px" height="32px"></a>
+              <a href="http://www.facebook.com/idd.dekikata" target="_blank"><img src="img/sns_facebook.svg" width="32px" height="32px"></a>
+              <a href="https://www.instagram.com/dekikata2017/?hl=ja" target="_blank"><img src="img/sns_instagram.svg" width="32px" height="32px"></a>
+            </div>
+            ©️ 2017 dekikata
+          </footer>
 
-<div id="footer">
-	©️ 2017 dekikata<br />
-<a href="https://twitter.com/dekikata2017" target="_blank"><img src="img/sns_twitter.svg" width="16px" height="16px"></a>
-	<a href="http://www.facebook.com/idd.dekikata" target="_blank"><img src="img/sns_facebook.svg" width="16px" height="16px"></a>
-	<a href="https://www.instagram.com/dekikata2017/?hl=ja" target="_blank"><img src="img/sns_instagram.svg" width="16px" height="16px"></a>
-	idd
-</div>
+        </div>
 
-</div>
-
-</body>
-</html>
+      </body>
+      </html>

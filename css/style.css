@@ -2,157 +2,29 @@
 /* CSS Document */
 
 html{
+	width: 100%;
 	height: 100%;
+	font-family: Avenir,　游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 body{
-	color: #3f382e;/*黒背景部のフォントカラー*/
+	width: 100%;
+	height:100%;
+	color: #3f382e;/*フォントカラー*/
+	font-size: 12pt;
+	text-align:center;
 	background-color: #fff;/*背景の色*/
-  font-size: 14pt;
-	height: 100%;
 	background-image: url(../img/back.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 100%;
+	background-attachment:fixed;
+	background-position: 50% 50%;
 }
 
-#wrapper{
-	/*width:800px;*/
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
-}
-
-.logo{ /*ロゴ*/
-	margin:0 auto;
-	font-size:18pt;
-	font-weight:normal;
-}
-
-.title{
-		font-size:18pt;
-}
-
-.title_sub{
-	font-size:16pt;
-}
-
-.text_top{
-  margin-top:80px;
-}
-.btn{
-  font-size: 16px;
-  color: #444344;
-  border: solid 1px #444344;
-  border-radius: 32px;
-  margin: 40px;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.5);
-}
-.btn:hover{
-  border: solid 2px #444344;
-  margin: 39px;
-}
-.sns{
-  position: fixed;
-  right: 0;
-  margin: 32px;
-}
-.sns img{
-  width: 24px;
-  height: 24px;
-  margin: 0 4px;
-}
-
-#open{
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: absolute;
-}
-.close_overlay {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    text-indent: -9999px;
-    position: absolute;
-    margin: 0;
-    background: #444344;
-    opacity: 0.5;
-    z-index: 5;
-}
-.modal_window {
-    top: 50%;
-    left: 50%;
-    margin: -250px 0 0 -250px;
-    padding: 120px 50px;
-    width: 400px;
-    height: 260px;
-    text-align: center;
-    display: block;
-    background: #fff;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 10;
-}
-.modal_window h2 {
-  font-size: 24px;
-  letter-spacing: 2px;
-}
-.modal_window p {
-    padding: 0 15px 15px 15px;
-    font-size: 14px;
-    line-height: 200%;
-    letter-spacing: 1px;
-    text-align: left;
-}
-/* CSS3 ModalWindow SET
--------------------------- */
-@-webkit-keyframes modalFadeIn {
-    0% {opacity:0;display:block;}
-    100% {opacity:1;}
-}
-
-div#modal div:target {
-    -webkit-animation-name: modalFadeIn;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: 1;
-    opacity: 1;
-    display:block;
-}
-
-#header{
-		background: #f2ece4;
-		width: 100%;
-		position: fixed;
-		top: 0;
-		height: auto;
-		padding: 40px 0;
-		display: none;
-
-}
-
-/*上部メニューのスタイル*/
-
-#menu{　
-	text-align:center;
-	display:none;
-}
-
-#menu ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-#menu li {
-	display: inline-block;
-	padding: 0;
-	margin: 0;
+header, footer, .contents{
+	box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 a{
@@ -160,55 +32,175 @@ a{
 	text-decoration:none;
 }
 
-/*上部メニューここまで*/
-
-
-#main{
-	color:#3f382e; /*フォントカラー*/
-	text-align:center;
-	margin:0;
-	display: flex;
-  justify-content: center;
-  align-items: center;
-	width: 100%;
-	height: 100%;
+a:hover{
+	color:#a6a098;
+	text-decoration:none;
 }
 
-.concept{
-
-}
-
-p{
-	text-align: left;
-}
-
-
-/*下部メニューのスタイル*/
-
-#footer{　
-	height: 140px;
-	padding: 20px 0;
+header{
+	background: rgba(255,255,255,0.7);
 	width: 100%;
 	position: fixed;
-	bottom: 0;
-	display: none;
+	top: 0;
+	height: 12%;
+	padding: 12px 0 10px 0;
+	z-index: +1;
 }
 
-#about{
+#wrapper{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#main{
+	/*margin:120px auto 0 auto;*/
+	height: 100%;
+	align-items:baseline;
+	position: relative;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	margin:auto;
+	background: rgba(255, 255, 0, 0.3);
+}
+
+.logo{
+	margin:0 0 8px 0;
+	display:inline-block;
+}
+
+.logo img{
+	height:20px;
+}
+
+.title{
+	font-size:16pt;
+	margin:0;
+}
+
+.title_sub{
+	font-size:14pt;
+}
+
+.btn{
+	font-size: 16px;
+	color: #444344;
+	border: solid 1px #444344;
+	border-radius: 32px;
+	margin: 20px auto 40px auto;
+	padding: 16px;
+	max-width:180px;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.btn:hover{
+	border: solid 2px #444344;
+	margin: 19px auto 39px auto;
+}
+
+.access .btn{
+	width:60%;
+}
+
+.sns{
+	margin: 0;
+}
+
+.sns img{
+	width: 24px;
+	height: 24px;
+	margin: 0 4px;
+}
+
+.menu{
+	width:100%;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.menu li {
+	display: inline-block;
+	padding: 0 5px;
+	margin: 0;
+}
+
+.menu li.active {/*選択中のタブ。色を変える等*/
+	color: #eee;
+}
+
+.contents,.contents_works {
+	background: rgba(255,0,128,0.2);
+	max-width:600px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 75%;
+	margin: 0% auto;
+	overflow: auto;
+	padding:30px;
+	justify-content: center;
+	align-items: center;
 	display:none;
 }
 
-#access{
-	display:none;
+.contents_works{
+	display:block;
 }
 
-#event{
-	display:none;
+.contents p{
+	text-align: justify;
+	max-width:570px;
+	margin:0 auto;
 }
 
-#link{
-	display:none;
+#page5 img{
+	width:100%;
+	margin:0 auto 20px auto;
 }
+
+.link{
+	display:inline-block;
+	width:180px;
+}
+
+.link img{
+	margin:20px 0;
+}
+
+.link p{
+	text-align:center;
+	width:180px;
+	margin:0;
+}
+
+footer{
+	margin:0 auto;
+	padding: 10px 0 10px 0;
+	width:100%;
+	height:12%;
+	background: rgba(255,255,255,0.7);
+	position:fixed;
+	bottom:0;
+}
+
+/*@media screen and (max-width:600px) {
+	/*　for iPhone Landscape　(iPhone 横)　*/
+/*	body{
+		background-size: 200%;
+	}
+	.sns img{
+		margin: 0 10px;
+	}
+
+	.menu li{
+		display:inline-block;
+		margin:0 auto;
+	}
+}*/
 
 ul, dl, dd {
   margin: 0;
@@ -220,126 +212,64 @@ ul {
 }
 
 
-.tabBtn {
-  display: table;
-  width: 100%;
-  margin: 0 0 5px;
-  padding: 0;
-  background-color: #20b2aa;
-  text-align: right;
-}
-
-.thumb{
-	list-style: none;
-}
-
-.tabBtn li {
-  display: inline-block;
-  width: 50px;
-  border-left: 1px solid #fff;
-  background-color: #20b2aa;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.tabBtn li label {
-  display: block;
-  cursor: pointer;
-  height: 18px;
-  padding: 9px 0;
-  color: #fff;
-  transition: background-color .3s;
-}
-
-.tabBtn li label::before {
-  content: "";
-  display: inline-block;
-  overflow: hidden;
-  width: 18px;
-  height: 18px;
-  background: url(../img/ico_tabs.svg) no-repeat;
-}
-
-.tabBtn li label[for="normalList"]::before {
-  background-position: 0 0;
-}
-
-.tabBtn li label[for="imageList"]::before {
-  background-position: -30px 0;
-}
-
-.tabBtn li label[for="textList"]::before {
-  background-position: -60px 0;
-}
-
-.tabBtn li label:hover {
-  background-color: rgba(205,92,92,.5);
-}
-
-/* :::::: contents :::::: */
-
 .thumb li,
 .thumb dl,
 .thumb dt,
 .thumb dd {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ -moz-box-sizing: border-box;
 }
 
 .thumb::after {
-  content: "";
-  display: block;
-  clear: both;
+ content: "";
+ display: block;
+ clear: both;
 }
 
 .thumb li {
-  float: left;
-  width: 33%;
-  padding: 0px;
+ float: left;
+ width: 33%;
+ padding: 2px;
 }
 
 .thumb li a {
-  display: block;
-  text-decoration: none;
-/*  background-color: #fff;*/
-  transition: color 0.6s, background-color 0.6s, opacity 0.6s;
+ display: block;
+ text-decoration: none;
+ background-color: #fff;
+ transition: color 0.6s, background-color 0.6s, opacity 0.6s;
 }
 
 .thumb dl {
-  position: relative;
-  overflow: hidden;
-  padding: 0px;
+ position: relative;
+ overflow: hidden;
+ padding: 10px;
 }
 
 .thumb dt,
 .thumb dd {
-  font-size: 0.8em;
-  line-height: 1.6;
+ font-size: 0.8em;
+ line-height: 1.6;
 }
 
 .thumb img {
-  width: 100%;
-  vertical-align: middle;
-/*  -webkit-filter: blur(3px);
-	filter: blur(3px);*/
+ width: 100%;
+ vertical-align: middle;
 }
 
 .thumb .date,
 .thumb .excerpt {
-  color: #373039;
+ color: #373039;
 }
 
 .thumb .ttl {
-  margin-bottom: 0.3em;
-  font-size: 1em;
-  line-height: 1.4;
+ margin-bottom: 0.3em;
+ font-size: 1em;
+ line-height: 1.4;
 }
 
 .thumb .excerpt {
-  font-size: 0.7em;
+ font-size: 0.7em;
 }
-
-
 /* :::::: image :::::: */
 
 .thumb .date,
@@ -348,7 +278,7 @@ ul {
   position: absolute;
   left: 0;
   line-height: 1;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(255,255,255,0.8);
 }
 
 .thumb .date {
@@ -356,7 +286,7 @@ ul {
   padding: 0.3em 5px 0.15em 15px;
 }
 
-.thumb .ttl {
+ .thumb .ttl {
   bottom: 0;
   width: 100%;
   margin: 0;
@@ -414,27 +344,6 @@ ul {
 
 .thumb a:hover .img img {
   opacity: .6;
-/*  -webkit-transform: scale(1.2);
-  transform: scale(1.2);*/
-/*  -webkit-filter: blur(0);
-	filter: blur(0);*/
-}
-
-@media screen and (max-width:600px) {
-    /*　for iPhone Landscape　(iPhone 横)　*/
-    body{
-      background-size: 230%;
-    }
-    #open{
-      overflow-x: hidden;
-    }
-    .modal_window {
-        margin: -225px 0 0 -225px;
-        padding: 70px 100px;
-        width: 250px;
-        height: 310px;
-    }
-    .sns img{
-      margin: 0 12px;
-    }
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
