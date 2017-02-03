@@ -9,34 +9,11 @@
   <meta name="keywords" content="できごとのかたち2017, 多摩美術大学, 多摩美, 情報デザイン, 情デ, できごとのかたち, できかた, 2017">
 
   <link rel="stylesheet" href="css/normalize.css" type="text/css" media="all">
-  <link rel="stylesheet" href="css/style_sp.css" type="text/css" media="only screen and (max-device-width:640px)">
   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen and (min-device-width:641px)">
 
-  <script src="http://maps.google.com/maps/api/js?sensor=true">
-  </script>
-
+  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="UTF-8"></script>
-  <script type="text/javascript">
-  $(document).ready(function() {
-
-    $('.contents').hide();
-    $('.contents:first').show();
-    $('.menu li:first').addClass('active');
-
-    $('.menu li').click(function() {
-
-      $('.menu li').removeClass('active');
-      $(this).addClass('active');
-      $('.contents').hide();
-
-
-      $($(this).find('a').attr('href')).fadeIn();
-      return false;
-    });
-  });
-
-  </script>
-
+  <script type="text/javascript" src="js/jquery.menu.js"></script>
 
   <title>できごとのかたち2017</title>
 
@@ -47,17 +24,29 @@
   <div id="wrapper">
 
     <header>
+      <!-- メニュー -->
       <h1 class="logo"><a href="index.html"><img src="img/logo.svg"></a></h1>
 
-      <!-- メニュー -->
-      <ul class="menu">
-        <!-- <li><a href="#page1">トップ</a></li> -->
-        <li><a href="#page2">概要</a></li>
-        <li><a href="#page3">イベント</a></li>
-        <li><a href="#page4">出展作品</a></li>
-        <li><a href="#page5">会場</a></li>
-        <li><a href="#page6">リンク</a></li>
-      </ul>
+      <nav id="global_nav">
+        <ul class="menu">
+          <li><a href="#page1">トップ</a></li>
+          <li><a href="#page2">展覧会概要</a></li>
+          <li><a href="#page3">イベント</a></li>
+          <li><a href="#page4">作品集</a></li>
+          <li><a href="#page5">会場</a></li>
+          <li><a href="#page6">リンク</a></li>
+        </ul>
+      </nav>
+
+      <div id="nav_toggle">
+        <a class="menu_trigger" href="#">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+      </div>
     </header>
 
     <!-- コンテンツ -->
@@ -65,72 +54,84 @@
 
       <!-- トップ -->
       <div id="page1" class="contents">
-        <img src="img/text_top.svg" width="100%">
+        <h2 class="title">できごとのかたち展</h2>
+        <hr class="border">
+        <p class="center">
+          2017.3.4(土) 3.5(日) 11:00~19:00<br />
+          六本木AXISギャラリー 入場無料
+        </p>
       </div>
 
       <!-- 展覧会概要 -->
       <div id="page2" class="contents">
         <h2 class="title">展覧会概要</h2>
+        <hr class="border">
         <h3 class="title_sub">できごとのかたち展とは？</h3>
         <p>
-          通称”できかた展”。学生の課題作品を発表し、多摩美術大学情報デザイン学科情報デザインコースを
-          広く知ってもらうことを目的としたプロジェクトです。
+          毎年六本木にて開催される、情報デザインコース2〜3年生の演習課題作品展です。
+          教員の推薦によって出展作品が決定し、展示計画や広報、設営にいたるまで、学生・教員スタッフの共同によってつくられています。
+        </p>
+        <p>
+          単なる作品展示ではなく、作品がつくられる過程や、製作者の想いまで展示することで、形態やメディアに限定されない多様な情報デザインを伝える
+          展覧会を目指しています。今年で10周年を迎えました。
         </p>
       </div>
 
       <!-- イベント -->
       <div id="page3" class="contents">
         <h2 class="title">イベント</h2>
+        <hr class="border">
+        <h3 class="title_sub">トークショー</h3>
+        <p>
+          3.4(土)/3.5(日)<br />
+          両日トークショー開催予定！
+        </p>
         <h3 class="title_sub">ワークショップ</h3>
         <p>
-          Coming Soon…
-        </p>
-
-        <h3 class="title_sub">トークイベント</h3>
-        <p>
-          Coming Soon…
+          3.4 11:00~19:00<br />
+          3.5 11:00~19:00<br />
+          上記の時間に製本ワークショップを開催します。<br />
+          DMをお持ちの方は、本の表紙になるのでご持参ください。
         </p>
       </div>
 
       <!-- 作品集 -->
       <div id="page4" class="contents">
-        <h2 class="title">出展作品</h2>
-        <h3 class="title_sub">作品集</h3>
-        <p>
-          Coming Soon…
+        <h2 class="title">作品集</h2>
+        <hr class="border">
+        <p class="center">
+          comming soon!
         </p>
       </div>
 
       <!-- アクセス -->
       <div id="page5" class="contents">
         <h2 class="title">会場</h2>
-        <h3 class="title_sub">AXISギャラリーへの道のり</h3>
-        <img src="img/accessmap.svg" width="570px">
+        <hr class="border">
+        <img src="img/accessmap.svg">
         <p>
-          AXISギャラリー<br />
-          〒106-003 東京都港区六本木5-17-1 AXISビル4F
-        </p>
+        都営地下鉄大江戸線　六本木駅③・⑤番出口<br />
+        東京メトロ日比谷線　六本木駅③番出口
+      </p>
         <a href="https://goo.gl/maps/frezbgKL7cE2" target="_blank"><div class="btn">Googleマップで表示</div></a>
 
-        <h3 class="title_sub">会場へのアクセス</h3>
-
-        <h4>電車でお越しの場合</h4>
-        <p>
-          都営地下鉄大江戸線　六本木駅③、⑤番出口<br />
-          東京メトロ日比谷線　六本木駅③番出口
-        </p>
-
-          <h4>バスでお越しの場合</h4>
+<h3 class="title_sub">バス</h3>
           <p>
           渋谷駅前（東口バスターミナルより）<br />
           都01　51番乗り場　新橋駅前行きまたは赤坂アークヒルズ行き：六本木駅前下車<br />
           渋88　59番乗り場　新橋駅前行き：六本木五丁目下車
+        </p>
+        <h3 class="title_sub">会場</h3>
+        <p>
+          AXISギャラリー<br />
+          〒106-003 東京都港区六本木5-17-1 AXISビル4F
         </p>
       </div>
 
       <!-- リンク -->
       <div id="page6" class="contents">
         <h2 class="title">リンク</h2>
+        <hr class="border">
         <div class="link">
           <a href="http://www.idd.tamabi.ac.jp/design/exhibit/dekikata/" target="_blank">
             <img src="img/dekikata.svg" height="110px">
@@ -144,7 +145,7 @@
               <img src="img/sotsuten.svg" height="120px">
               <p>
                 情デ卒展<br />
-                こ−個性のつながり</p>
+                Webサイト</p>
               </a>
             </div>
             <div class="link">
@@ -161,13 +162,13 @@
           </div>
 
           <footer>
-            <!-- snsへのリンク -->
             <div class="sns">
-              <a href="https://twitter.com/dekikata2017" target="_blank"><img src="img/sns_twitter.svg" width="32px" height="32px"></a>
-              <a href="http://www.facebook.com/idd.dekikata" target="_blank"><img src="img/sns_facebook.svg" width="32px" height="32px"></a>
-              <a href="https://www.instagram.com/dekikata2017/?hl=ja" target="_blank"><img src="img/sns_instagram.svg" width="32px" height="32px"></a>
+              <ul class="menu">
+                <li><a href="https://twitter.com/dekikata2017" target="_blank">Twitter</a></li>
+                <li><a href="http://www.facebook.com/idd.dekikata" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/dekikata2017/?hl=ja" target="_blank">Instagram</a></li>
+              </ul>
             </div>
-            ©️ 2017 dekikata
           </footer>
 
         </div>

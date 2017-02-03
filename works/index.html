@@ -6,6 +6,9 @@
 	<link rel="stylesheet" href="../css/normalize.css" type="text/css" media="all">
 	<link rel="stylesheet" href="../css/style.css" type="text/css" media="all">
 
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="UTF-8"></script>
+  <script type="text/javascript" src="../js/jquery.menu.js"></script>
+
 	<title>できごとのかたち2017</title>
 
 </head>
@@ -16,21 +19,31 @@
 
 		<header>
 			<h1 class="logo"><a href="index.html#top">☆できかた作品集2017☆</a></h1>
-			<div id="menu">
-				<ul class="menu">
-					<li class="all current"><a href="#" style="outline: none;">全ての作品</a></li>
-					<li class="current"><a href="#" style="outline: none;">２年</a></li>
-					<li class="current"><a href="#" style="outline: none;">３年前期</a></li>
-					<li class="current"><a href="#" style="outline: none;">３年後期</a></li>
+			<nav id="global_nav">
+        <ul class="menu">
+					<li><a href="#page1">全ての作品</a></li>
+					<li><a href="#" style="outline: none;">２年</a></li>
+					<li><a href="#" style="outline: none;">３年前期</a></li>
+					<li><a href="#" style="outline: none;">３年後期</a></li>
 				</ul>
-			</div>
+			</nav>
+
+			<div id="nav_toggle">
+        <a class="menu_trigger" href="#">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+      </div>
 		</header>
 
 
 		<div id="main">
-			<div class="contents_works">
-			<h2 class="title">２年</h2>
-
+			<div class="contents" id="page1">
+			<h2 class="title">2年</h2>
+<span class="border"></span>
 			<ul class="thumb">
 
 				<li><a href="3_nkn_a.html"><dl>
@@ -81,6 +94,16 @@
 		<div id="footer">
 
 		</div>
+
+		<footer>
+			<div class="sns">
+				<ul class="menu">
+					<li><a href="https://twitter.com/dekikata2017" target="_blank">Twitter</a></li>
+					<li><a href="http://www.facebook.com/idd.dekikata" target="_blank">Facebook</a></li>
+					<li><a href="https://www.instagram.com/dekikata2017/?hl=ja" target="_blank">Instagram</a></li>
+				</ul>
+			</div>
+		</footer>
 
 	</div>
 

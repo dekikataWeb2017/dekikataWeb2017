@@ -6,6 +6,19 @@
 	<link rel="stylesheet" href="../css/normalize.css" type="text/css" media="all">
 	<link rel="stylesheet" href="../css/style.css" type="text/css" media="all">
 
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript">$(function(){
+	$("img.ChangePhoto").click(function(){
+			var ImgSrc = $(this).attr("src");
+			var ImgAlt = $(this).attr("alt");
+			$("img#MainPhoto").attr({src:ImgSrc,alt:ImgAlt});
+			$("img#MainPhoto").hide();
+			$("img#MainPhoto").fadeIn("slow");
+			return false;
+	});
+});
+</script>
+
 	<title>できごとのかたち2017</title>
 
 </head>
@@ -16,33 +29,38 @@
 
 		<header>
 			<h1 class="logo"><a href="index.html#top">☆できかた作品集2017☆</a></h1>
-			<div id="menu">
+			<nav>
 				<ul class="menu">
 					<li class="all current"><a href="#" style="outline: none;">全ての作品</a></li>
 					<li class="current"><a href="#" style="outline: none;">２年</a></li>
 					<li class="current"><a href="#" style="outline: none;">３年前期</a></li>
 					<li class="current"><a href="#" style="outline: none;">３年後期</a></li>
 				</ul>
-			</div>
+			</nav>
 		</header>
 
 
 		<div id="main">
-			<div class="contents_works">
-			2年　3D表現演習<br />
-			つまむかたち×たのしい楽器<br />
-			<img src="img/3_nkn_a1.png" width="100%"><br />
-			<div id="thumbs">
-	<label for="r1"><img src="wp-images/s1.jpg"></label>
-	<label for="r2"><img src="wp-images/s2.jpg"></label>
-	<label for="r3"><img src="wp-images/s3.jpg"></label>
-	<label for="r4"><img src="wp-images/s4.jpg"></label>
-	<label for="r5"><img src="wp-images/s5.jpg"></label>
+			<div class="contents">
+				<h2 class="title">2年　3D表現演習</h2>
+				<span class="border"></span>
+				<h3 class="title_sub">つまむかたち×たのしい楽器</h3>
+				高屋 知織<br />
+<div class="wrap">
+<p><img src="img/01.png" alt="下筌ダム" id="MainPhoto"></p>
+<ul>
+<li><img src="img/01.png" alt="下筌ダム" class="ChangePhoto"></li>
+<li><img src="img/02.png" alt="石打ダム" class="ChangePhoto"></li>
+<li><img src="img/03.png" alt="船津ダム" class="ChangePhoto"></li>
+<li><img src="img/04.png" alt="緑川ダム" class="ChangePhoto"></li>
+<li><img src="img/05.png" alt="荒瀬ダム" class="ChangePhoto"></li>
+</ul>
 </div>
-			<p class="caption">
-			人の指の形にフィットするつまみの形を検証し、そのつまみのデザインを起点にした、既存の楽器(シェイカーとカスタネット)の新しいかたちを提案します。小さなこどもが扱うことを想定し、おもちゃのような色使いと丸みのある形に仕上げました。
-			</p>
-</div>
+
+				<p class="caption">
+					人の指の形にフィットするつまみの形を検証し、そのつまみのデザインを起点にした、既存の楽器(シェイカーとカスタネット)の新しいかたちを提案します。小さなこどもが扱うことを想定し、おもちゃのような色使いと丸みのある形に仕上げました。
+				</p>
+			</div>
 		</div>
 
 		<div id="footer">
