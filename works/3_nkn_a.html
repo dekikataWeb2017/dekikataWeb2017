@@ -6,18 +6,20 @@
 	<link rel="stylesheet" href="../css/normalize.css" type="text/css" media="all">
 	<link rel="stylesheet" href="../css/style.css" type="text/css" media="all">
 
-<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="UTF-8"></script>
-<script type="text/javascript">$(function(){
-	$("img.ChangePhoto").click(function(){
-			var ImgSrc = $(this).attr("src");
-			var ImgAlt = $(this).attr("alt");
-			$("img#MainPhoto").attr({src:ImgSrc,alt:ImgAlt});
-			$("img#MainPhoto").hide();
-			$("img#MainPhoto").fadeIn("slow");
-			return false;
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("img.photo_change").click(function(){
+			var img_src = $(this).attr("src");
+			var img_alt = $(this).attr("alt");
+			$("img#photo_main").fadeOut("slow", function(){
+				$("img#photo_main").attr({src:img_src,alt:img_alt});
+				$("img#photo_main").fadeIn("slow");
+				return false;
+			});
+		});
 	});
-});
-</script>
+	</script>
 
 	<title>できごとのかたち2017</title>
 
@@ -41,31 +43,72 @@
 
 
 		<div id="main">
-			<div class="contents">
+			<div class="contents_works">
 				<h2 class="title">2年　3D表現演習</h2>
-				<span class="border"></span>
-				<h3 class="title_sub">つまむかたち×たのしい楽器</h3>
-				高屋 知織<br />
-<div class="wrap">
-<p><img src="img/01.png" alt="下筌ダム" id="MainPhoto"></p>
-<ul>
-<li><img src="img/01.png" alt="下筌ダム" class="ChangePhoto"></li>
-<li><img src="img/02.png" alt="石打ダム" class="ChangePhoto"></li>
-<li><img src="img/03.png" alt="船津ダム" class="ChangePhoto"></li>
-<li><img src="img/04.png" alt="緑川ダム" class="ChangePhoto"></li>
-<li><img src="img/05.png" alt="荒瀬ダム" class="ChangePhoto"></li>
-</ul>
-</div>
+				<hr class="border">
+				<p class="discription">授業内容の説明がここに入ります</p>
+				<div class="wrap">
+					<div class="left">
+						<p><img src="img/01.jpg" id="photo_main"></p>
+						<ul>
+							<li><img src="img/01.jpg" class="photo_change"></li>
+							<li><img src="img/02.jpg" class="photo_change"></li>
+							<li><img src="img/03.jpg" class="photo_change"></li>
+							<li><img src="img/04.jpg" class="photo_change"></li>
+						</ul>
+					</div>
+					<div class="right">
+						<h3 class="title_sub">つまむかたち×たのしい楽器</h3>
+						高屋 知織<br />
 
-				<p class="caption">
-					人の指の形にフィットするつまみの形を検証し、そのつまみのデザインを起点にした、既存の楽器(シェイカーとカスタネット)の新しいかたちを提案します。小さなこどもが扱うことを想定し、おもちゃのような色使いと丸みのある形に仕上げました。
-				</p>
+						<p class="caption">
+							人の指の形にフィットするつまみの形を検証し、そのつまみのデザインを起点にした、既存の楽器(シェイカーとカスタネット)の新しいかたちを提案します。小さなこどもが扱うことを想定し、おもちゃのような色使いと丸みのある形に仕上げました。
+						</p>
+						<h3 class="title_sub">先生からのコメント</h3>
+						<p class="caption">
+							先生からのコメントが入ります先生からのコメントが入ります先生からのコメントが入ります先生からのコメントが入ります先生からのコメントが入ります先生からのコメントが入ります
+						</p>
+
+					</div>
+				</div>
+
+				<div class="wrap">
+					<div class="left">
+						<p><img src="img/01.jpg" id="photo_main"></p>
+						<ul>
+							<li><img src="img/01.jpg" class="photo_change"></li>
+							<li><img src="img/02.jpg" class="photo_change"></li>
+							<li><img src="img/03.jpg" class="photo_change"></li>
+							<li><img src="img/04.jpg" class="photo_change"></li>
+						</ul>
+					</div>
+					<div class="right">
+						<h3 class="title_sub">BASE PLANT</h3>
+						山﨑 健悟<br />
+
+						<p class="caption">
+							人の指の形にフィットするつまみの形を検証し、そのつまみのデザインを起点にした、既存の楽器(シェイカーとカスタネット)の新しいかたちを提案します。小さなこどもが扱うことを想定し、おもちゃのような色使いと丸みのある形に仕上げました。
+						</p>
+						<h3 class="title_sub">先生からのコメント</h3>
+						<p class="caption">
+							先生からのコメントが入ります先生からのコメントが入ります先生からのコメントが入ります先生からのコメントが入ります先生からのコメントが入ります先生からのコメントが入ります
+						</p>
+
+					</div>
+				</div>
+
 			</div>
 		</div>
 
-		<div id="footer">
-
-		</div>
+		<footer>
+			<div class="sns">
+				<ul class="menu">
+					<li><a href="https://twitter.com/dekikata2017" target="_blank">Twitter</a></li>
+					<li><a href="http://www.facebook.com/idd.dekikata" target="_blank">Facebook</a></li>
+					<li><a href="https://www.instagram.com/dekikata2017/?hl=ja" target="_blank">Instagram</a></li>
+				</ul>
+			</div>
+		</footer>
 
 	</div>
 
