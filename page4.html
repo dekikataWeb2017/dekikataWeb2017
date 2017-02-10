@@ -15,21 +15,6 @@
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="UTF-8"></script>
   <script type="text/javascript" src="js/jquery.menu.js"></script>
   <script type="text/javascript" src="js/animsition.min.js"></script>
-  <script type="text/javascript" src="js/jquery.gradientify.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-$('.back').gradientify({
-    gradients: [
-        { start: [112,179,176], stop: [240,139,39]},
-        { start: [184,185,185], stop: [205,222,237]},
-        { start: [230,226,202], stop: [221,166,170]},
-        { start: [183,173,207], stop: [172,204,223]},
-        { start: [56,93,136], stop: [109,196,214]}
-    ]
-});
-});
-</script>
 
   <title>できごとのかたち2017</title>
 
@@ -37,12 +22,12 @@ $('.back').gradientify({
 
 <body>
 
-  <div id="wrapper" class="animsition back">
+  <div id="wrapper" class="animsition back2">
 
     <header>
       <!-- メニュー -->
       <div class="space"></div>
-<h1 class="logo"><a href="index.html" class="animsition-link"><img src="img/logo_top.svg"></a></h1>
+      <h1 class="logo"><a href="index.html" class="animsition-link"><img src="img/logo.svg"></a></h1>
 
       <nav id="global_nav">
         <ul class="menu">
@@ -69,13 +54,30 @@ $('.back').gradientify({
     <!-- コンテンツ -->
     <div id="main">
 
-      <!-- トップ -->
-      <div class="contents_top">
-        <h2 class="title"><img src="img/text_top_title.svg"></h2>
-        <img src="img/top.png">
-        <p class="center">
-          <img src="img/text_top_date.svg">
+      <!-- アクセス -->
+      <div class="contents">
+        <h2 class="title">会場</h2>
+        <hr class="border">
+        <img src="img/accessmap.svg" width="100%" class="map">
+        <p class="map_text">
+          都営地下鉄大江戸線　六本木駅③・⑤番出口<br />
+          東京メトロ日比谷線　六本木駅③番出口
         </p>
+
+
+        <h3 class="title_sub">バス</h3>
+        <p>
+          渋谷駅前（東口バスターミナルより）<br />
+          都01　51番乗り場　新橋駅前行きまたは赤坂アークヒルズ行き：六本木駅前下車<br />
+          渋88　59番乗り場　新橋駅前行き：六本木五丁目下車
+        </p>
+        <h3 class="title_sub">会場</h3>
+        <p>
+          AXISギャラリー<br />
+          〒106-003 東京都港区六本木5-17-1 AXISビル4F
+        </p>
+
+        <a href="https://goo.gl/maps/frezbgKL7cE2" target="_blank"><div class="btn">Googleマップで表示</div></a>
       </div>
 
     </div>
